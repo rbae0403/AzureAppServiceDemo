@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web.Http.Description;
 using Swashbuckle.Swagger;
 
@@ -24,6 +25,11 @@ namespace DemoAzureBlob.Filters
         /// <param name="apiDescription">The API description.</param>
         public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
         {
+            if (apiDescription.HttpMethod != HttpMethod.Post)
+            {
+                return;
+            }
+
             if (apiDescription.ActionDescriptor.ActionName.Contains("File"))
             {
                 if (operation.parameters == null)
