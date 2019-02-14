@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DemoAzureBlob</name>
+    </assembly>
+    <members>
+        <member name="T:DemoAzureBlob.SwaggerConfig">
+            <summary>
+            SwaggerConfig
+            </summary>
+        </member>
+        <member name="M:DemoAzureBlob.SwaggerConfig.Register">
+            <summary>
+            Registers this instance.
+            </summary>
+        </member>
+        <member name="M:DemoAzureBlob.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Gets the XML comments path.
+            </summary>
+            <returns>
+            path
+            </returns>
+        </member>
+        <member name="T:DemoAzureBlob.WebApiConfig">
+            <summary>
+            WebApiConfig
+            </summary>
+        </member>
+        <member name="M:DemoAzureBlob.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:DemoAzureBlob.Controllers.DemoController">
+            <summary>
+            DemoController
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:DemoAzureBlob.Controllers.DemoController.UploadImageFile">
+            <summary>
+            Uploads the image file.
+            </summary>
+            <returns>
+            image url
+            </returns>
+        </member>
+        <member name="T:DemoAzureBlob.Filters.FileUploadOperationFilter">
+            <summary>
+            FileUploadOperationFilter
+            </summary>
+            <seealso cref="T:Swashbuckle.Swagger.IOperationFilter" />
+        </member>
+        <member name="F:DemoAzureBlob.Filters.FileUploadOperationFilter.FileUploadParamName">
+            <summary>
+            The file upload parameter name
+            </summary>
+        </member>
+        <member name="M:DemoAzureBlob.Filters.FileUploadOperationFilter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Applies the specified operation.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="schemaRegistry">The schema registry.</param>
+            <param name="apiDescription">The API description.</param>
+        </member>
+    </members>
+</doc>
